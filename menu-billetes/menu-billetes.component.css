@@ -1,0 +1,14 @@
+@import url(/src/app/app.component.css);
+span{
+    color: black;
+}.back{
+    background-color: white;
+    border-color: red;
+    
+}
+.invertido{
+    color: red;
+}
+.white{
+    color: white;
+}

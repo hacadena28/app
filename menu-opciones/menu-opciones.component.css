@@ -1,0 +1,21 @@
+@import url(/src/app/app.component.css);
+.espaciador{
+    padding-top: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.card-container {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.back{
+    background-color: white;
+    border-color: red;
+    
+}
+.invertido{
+    color: red;
+}

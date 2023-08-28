@@ -1,0 +1,74 @@
+<div class="espaciador" *ngIf="estado!='RetiroExitoso'">
+  <div class="card-container" *ngIf="estado == 'RetiroDistinto'">
+    <div class="col">
+      <input disabled type="text" class="control" id="nuevo" value="{{valor}}" />
+    </div>
+  </div>
+  <!-- ------------------------------------- -->
+  <div class="card-container" *ngIf="estado == 'RetiroDistinto'">
+    <div class="card-container">
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(1)">
+        <span class="">1</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(2)">
+        <span class="">2</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(3)">
+        <span class="">3</span>
+      </a>
+    </div>
+    <div class="card-container">
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(4)">
+        <span class="">4</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(5)">
+        <span class="">5</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(6)">
+        <span class="">6</span>
+      </a>
+    </div>
+    <div class="card-container">
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(7)">
+        <span class="">7</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(8)">
+        <span class="">8</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(9)">
+        <span class="">9</span>
+      </a>
+    </div>
+    <div class="card-container">
+      <a
+        class="card"
+        target="_blank"
+        rel="noopener"
+        (click)="limpiarValor()"
+      >
+        <span class="">Borrar</span>
+      </a>
+      <a class="card" target="_blank" rel="noopener" (click)="sumar(0)">
+        <span class="">0</span>
+      </a>
+      <a class="card back grend" target="_blank" rel="noopener" (click)="retirar()">
+        <span class="invertidoGrend">Retirar</span>
+      </a>
+    </div>
+  </div>
+  <!-- ------------------------------------- -->
+
+  <div class="card-container" *ngIf="estado == 'RetiroDistinto'">
+    <a
+      class="card back"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('Retirar')"
+    >
+      <span class="invertido">Atras </span>
+    </a>
+  </div>
+  <app-menu-retiro *ngIf="estado == 'Retirar'"></app-menu-retiro>
+</div>
+<app-retiro *ngIf="estado == 'RetiroExitoso'"></app-retiro>
+

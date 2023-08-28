@@ -1,0 +1,46 @@
+<div *ngIf="estado == 'Recargar'">
+<h2>Cantidad</h2>
+
+<div>10K</div>
+<span>Total</span>
+<span>100</span>
+<hr />
+<div>20K</div>
+<span>Total</span>
+<span>100</span>
+<hr />
+<div>50K</div>
+<span>Total</span>
+<span>100</span>
+<hr />
+<div>100K</div>
+<span>Total</span>
+<span>100</span>
+<hr />
+
+<h3>Total Dinero</h3>
+<span>100000</span>
+
+
+   <div class="card-container">
+      <a
+      class="card back"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('Menu')"
+    >
+      <span class="invertido">Atras </span>
+    </a>
+    
+    <a
+    class="card "
+    target="_blank"
+    rel="noopener"
+    (click)="cambiarEstado('RecargarBilletes')"
+  >
+    <span class="white">Recargar </span>
+  </a>
+  
+    </div>
+    </div> <app-menu-opciones *ngIf="estado == 'Menu'"> </app-menu-opciones>
+    <app-recargar-billetes *ngIf="estado == 'RecargarBilletes'"   > </app-recargar-billetes>

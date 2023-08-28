@@ -1,0 +1,80 @@
+<div class="espaciador" *ngIf="estado == 'RetiroExitoso'">
+  <div class="card-container">
+    <h2>Cantidad</h2>
+
+    <div class="card-container">
+      <div class="card back" *ngFor="let item of billetes10K">
+        <div>
+          <img
+            src="./../../assets/Billetes/colombian-peso-vector-10K.png"
+            alt="10K"
+          />
+        </div>
+        <hr />
+        <span class="dos">X{{billetes10K.length}}</span>
+      </div>
+      <div class="card-container"></div>
+      <div class="card back" *ngFor="let item of billetes20K">
+        <div>
+          <img
+            src="./../../assets/Billetes/colombian-peso-vector-20K.png"
+            alt="20K"
+          />
+        </div>
+        <hr />
+        <span class="dos">x{{billetes20K.length}}</span>
+      </div>
+      <div class="card-container"></div>
+      <div class="card back" *ngFor="let item of billetes50K">
+        <div>
+          <img
+            src="./../../assets/Billetes/colombian-peso-vector-50kwebp.png"
+            alt="50K"
+          />
+        </div>
+        <hr />
+        <span class="dos">X{{billetes50K.length}}</span>
+      </div>
+      <div class="card-container"></div>
+      <div class="card back" *ngFor="let item of billetes100K">
+        <div>
+          <img
+            src="./../../assets/Billetes/colombian-peso-vector-100K.png"
+            alt="100K"
+          />
+        </div>
+        <span class="dos">X{{billetes100K.length}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="espacio">
+
+  </div>
+  <div class="card-container">
+  <h3 class="card back2 invertido">Total Retiro
+    <span class="invertido">: {{total}}</span>
+
+  </h3>
+</div>
+  <div class="card-container">
+    <a
+      class="card back2"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('Menu')"
+    >
+      <span class="invertido">Salir </span>
+    </a>
+
+    <a
+      class="card"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('Retirar')"
+    >
+      <span class="white">Nuevo retiro </span>
+    </a>
+  </div>
+</div>
+<app-menu-opciones *ngIf="estado == 'Menu'"> </app-menu-opciones>
+<app-menu-retiro *ngIf="estado == 'Retirar'"></app-menu-retiro>

@@ -1,0 +1,51 @@
+<div class="espaciador" *ngIf="estado == 'Menu'">
+  <div class="card-container">
+    <a
+      class="card"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('Retirar')"
+    >
+      <span>Retirar </span>
+      <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      </svg>
+    </a>
+    <br />
+    <!-- <a
+      class="card"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('Recargar')"
+    >
+      <span>Recargar Billetes </span>
+      <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      </svg>
+    </a>
+    <br /> -->
+
+    <a
+      class="card back"
+      target="_blank"
+      rel="noopener"
+      (click)="cambiarEstado('MenuPrincipal')"
+    >
+      <span class="invertido">Atras </span>
+    </a>
+    
+    <br />
+  </div>
+  
+</div>
+
+<app-menu-principal *ngIf="estado == 'MenuPrincipal'">
+
+</app-menu-principal>
+
+<app-menu-retiro *ngIf="estado == 'Retirar'"
+></app-menu-retiro>
+<app-menu-billetes *ngIf="estado == 'Recargar'">
+  
+</app-menu-billetes>
+

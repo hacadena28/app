@@ -1,0 +1,26 @@
+@import url(/src/app/app.component.css);
+.back {
+    background-color: white;
+    border-color: red;
+
+}.invertido {
+    color: red;
+}
+.control{
+    width: 38vh;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin-bottom: 16px;
+}
+.grend{
+    background-color : green;
+    border-color: white;
+
+}.invertidoGrend {
+    color: white;
+}
+.card{
+    height: 50px;
+    width: 50px;
+}

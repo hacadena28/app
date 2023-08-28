@@ -1,0 +1,61 @@
+<div *ngIf="estado === 'RecargarBilletes'">
+<h2>Cantidad</h2>
+<button>-</button>
+<div>
+    10K
+</div>
+<span>Total</span>
+<span>100</span>
+<button>+</button>
+<hr>
+<button>-</button>
+
+<div>
+    20K
+</div>
+<span>Total</span>
+<span>100</span>
+<button>+</button>
+
+<hr>
+<button>-</button>
+
+<div>50K</div>
+<span>Total</span>
+<span>100</span>
+<button>+</button>
+
+<hr>
+
+<button>-</button>
+<div>100K</div>
+<span>Total</span>
+<span>100</span>
+<button>+</button>
+
+<hr>
+
+
+
+<div class="card-container">
+    <a
+    class="card back"
+    target="_blank"
+    rel="noopener"
+    (click)="cambiarEstado('Menu')"
+  >
+    <span class="invertido">Atras </span>
+  </a>
+  
+  <a
+  class="card "
+  target="_blank"
+  rel="noopener"
+  (click)="confirmarRecarga('Menu')"
+>
+  <span class="white">Recargar </span>
+</a>
+
+  </div>
+  </div>
+ <app-menu-opciones *ngIf="estado == 'Menu'"> </app-menu-opciones>
